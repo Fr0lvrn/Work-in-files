@@ -13,6 +13,7 @@ string massString[a]; // создаем  массив типа стринг с именем massString , разме
 
 void firstFile(string c)
 {
+	setlocale(LC_ALL, "rus");
 	string path = c; //строка path хранит в себе название файла
 	fstream file_read; // присваиваем классу fstream название file_read
 	file_read.open(path, fstream::in | fstream::out | fstream::trunc);// используя метод опен указываем что мы работаем с нашим файлом и на запись и на чтение , trunc удаляет все что в файле было

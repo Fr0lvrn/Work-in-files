@@ -6,6 +6,7 @@
 
 void secondFile(string b)
 {
+	setlocale(LC_ALL, "rus");
 	ofstream file_record(b); // команда для записи в файл ofstream ( в скобочках путь к файлу)
 
 	if (!file_record.is_open())
