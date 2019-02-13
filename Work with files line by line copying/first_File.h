@@ -8,22 +8,22 @@
 using namespace std;
 const int a = 6;
 
-string massString[a]; // создаем  массив типа стринг с именем massString , размером а
+string massString[a]; // СЃРѕР·РґР°РµРј  РјР°СЃСЃРёРІ С‚РёРїР° СЃС‚СЂРёРЅРі СЃ РёРјРµРЅРµРј massString , СЂР°Р·РјРµСЂРѕРј Р°
 
 
 void firstFile(string c)
 {
 	setlocale(LC_ALL, "rus");
-	string path = c; //строка path хранит в себе название файла
-	fstream file_read; // присваиваем классу fstream название file_read
-	file_read.open(path, fstream::in | fstream::out | fstream::trunc);// используя метод опен указываем что мы работаем с нашим файлом и на запись и на чтение , trunc удаляет все что в файле было
+	string path = c; //СЃС‚СЂРѕРєР° path С…СЂР°РЅРёС‚ РІ СЃРµР±Рµ РЅР°Р·РІР°РЅРёРµ С„Р°Р№Р»Р°
+	fstream file_read; // РїСЂРёСЃРІР°РёРІР°РµРј РєР»Р°СЃСЃСѓ fstream РЅР°Р·РІР°РЅРёРµ file_read
+	file_read.open(path, fstream::in | fstream::out | fstream::trunc);// РёСЃРїРѕР»СЊР·СѓСЏ РјРµС‚РѕРґ РѕРїРµРЅ СѓРєР°Р·С‹РІР°РµРј С‡С‚Рѕ РјС‹ СЂР°Р±РѕС‚Р°РµРј СЃ РЅР°С€РёРј С„Р°Р№Р»РѕРј Рё РЅР° Р·Р°РїРёСЃСЊ Рё РЅР° С‡С‚РµРЅРёРµ , trunc СѓРґР°Р»СЏРµС‚ РІСЃРµ С‡С‚Рѕ РІ С„Р°Р№Р»Рµ Р±С‹Р»Рѕ
 
-	if (!file_read.is_open()) // если файл не открылся напишет Error
+	if (!file_read.is_open()) // РµСЃР»Рё С„Р°Р№Р» РЅРµ РѕС‚РєСЂС‹Р»СЃСЏ РЅР°РїРёС€РµС‚ Error
 	{
 		cout << "Error" << endl;
 
 	}
-	else							// если файл открылся , то записывем текст
+	else							// РµСЃР»Рё С„Р°Р№Р» РѕС‚РєСЂС‹Р»СЃСЏ , С‚Рѕ Р·Р°РїРёСЃС‹РІРµРј С‚РµРєСЃС‚
 	{
 		{
 			file_read << "When you walk through a storm " << "\n";
@@ -33,7 +33,7 @@ void firstFile(string c)
 			file_read << "Is a golden sky" << "\n";
 			file_read << "And the sweet silver song of a lark" << "\n";
 		}
-		file_read.close(); // закрываем 
+		file_read.close(); // Р·Р°РєСЂС‹РІР°РµРј 
 	}
 
 	file_read.open(path, fstream::in | fstream::out);
@@ -43,7 +43,7 @@ void firstFile(string c)
 		cout << "Error" << endl;
 
 	}
-	else							// если файл открылся , то  выгружаем построчно данные в массив massString
+	else							// РµСЃР»Рё С„Р°Р№Р» РѕС‚РєСЂС‹Р»СЃСЏ , С‚Рѕ  РІС‹РіСЂСѓР¶Р°РµРј РїРѕСЃС‚СЂРѕС‡РЅРѕ РґР°РЅРЅС‹Рµ РІ РјР°СЃСЃРёРІ massString
 	{
 		for (int i = 0; i < a; i++)
 		{
